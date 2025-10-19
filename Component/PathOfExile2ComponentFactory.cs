@@ -14,14 +14,8 @@ namespace LiveSplit.PathOfExile2AutoSplitter.Component
         public string ComponentName => "Path of Exile 2";
         public string Description => "An AutoSplitter for Path of Exile 2";
         public string UpdateName => "Path of Exile 2";
-        // Fill in this empty string with the URL of the repository where your component is hosted.
-        // This should be the raw content version of the repository. If you're not uploading this
-        // to GitHub or somewhere, you can ignore this.
-        public string UpdateURL => "";
-        public Version Version => Version.Parse("1.0.0");
-        // Fill in this empty string with the path of the XML file containing update information.
-        // Check other LiveSplit components for examples of this. If you're not uploading this to
-        // GitHub or somewhere, you can ignore this.
+        public string UpdateURL => "http://raw.githubusercontent.com/SavageOranges/PathOfExile2_AutoSplitterForLiveSplit/master/Component/DLL/";
+        public Version Version => Version.Parse("1.0.1");
         public string XMLURL => UpdateURL + "updates.xml";
         
         public IComponent Create(LiveSplitState state)

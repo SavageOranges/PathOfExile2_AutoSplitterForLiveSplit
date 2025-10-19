@@ -114,6 +114,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Component\DLL\LiveSplit.PathOfExile2AutoSplitter.dll" />
+    <Content Include="Component\DLL\updates.xml" />
     <Content Include="readme.md" />
     <Content Include="Resources\LevelUp.png" />
   </ItemGroup>
