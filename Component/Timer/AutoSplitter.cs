@@ -52,9 +52,9 @@ namespace LiveSplit.PathOfExile2AutoSplitter.Component.Timer
             if (_settings.AutoSplitEnabled)
             {
                 // Automatically start the timer when player enters The Riverbank
-                if (_settings.AutoStartEnabled)
+                if (campaignArea.Serialize() == "The Riverbank" && _settings.AutoStartEnabled)
                 {
-                    HandleAutoStart(campaignArea);
+                    _timer.Start();
                     encounteredCampaignAreas.Add(campaignArea);
                     
                     return;
@@ -97,19 +97,6 @@ namespace LiveSplit.PathOfExile2AutoSplitter.Component.Timer
                 );
                 
                 _timer.CurrentState.CallComparisonRenamed(EventArgs.Empty);
-            }
-        }
-        
-        private void HandleAutoStart(ICampaignArea campaignArea)
-        {
-            // TODO
-            // Have encounteredCampaignAreas persist between sessions so that runs do not need to be completed
-            // in one sitting. This should be manually achievable with [INSERT LINK TO LIVESPLIT LOADER],
-            // but implementation within just this component would be nice.
-            
-            if (campaignArea.Serialize() == "The Riverbank")
-            {
-                _timer.Start();
             }
         }
         
